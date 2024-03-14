@@ -7,7 +7,7 @@ const servidor = http.createServer((requisicao, resposta) => {
     resposta.writeHead(200, {'Content-Type': 'text/html'})
     resposta.write(requisicao.url)
     //formato de String que passamos dados para o servidor (queryString)
-    //forma de passar dado para o servidor, passando nome e ra pela rota
+    //forma de passar dado para o servidor, passando nome e RA pela rota
     const p = url.parse(requisicao.url, true).query
     resposta.write('<br/>' + p.nome)
     resposta.write('<br/>' + p.ra)    
